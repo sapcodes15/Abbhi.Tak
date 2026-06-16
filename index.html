@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abbhi Tak</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="logo"><span class="logo-red">Abbhi</span> Tak</div>
+    <div class="topbar-right">
+      <input type="text" id="search-input" placeholder="Search news..." />
+      <button id="search-btn">Search</button>
+      <button class="theme-btn" id="theme-btn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-label">LIVE</div>
+    <div class="ticker-track" id="ticker-track">
+      <span>SENSEX: loading...</span>
+    </div>
+  </div>
+
+  <!-- CATEGORY TABS -->
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-category="business">Top News</button>
+    <button class="tab" data-category="general">India</button>
+    <button class="tab" data-category="technology">Technology</button>
+    <button class="tab" data-category="science">Science</button>
+    <button class="tab" data-category="health">Health</button>
+    <button class="tab" data-category="sports">Sports</button>
+    <button class="tab" data-category="entertainment">Entertainment</button>
+  </nav>
+
+  <!-- MARKET STRIP -->
+  <div class="market-strip" id="market-strip">
+    <div class="m-item"><div class="m-name">SENSEX</div><div class="m-val" id="sensex-val">--</div><div class="m-chg" id="sensex-chg">--</div></div>
+    <div class="m-item"><div class="m-name">NIFTY 50</div><div class="m-val" id="nifty-val">--</div><div class="m-chg" id="nifty-chg">--</div></div>
+    <div class="m-item"><div class="m-name">USD/INR</div><div class="m-val" id="usdinr-val">--</div><div class="m-chg" id="usdinr-chg">--</div></div>
+    <div class="m-item"><div class="m-name">GOLD</div><div class="m-val" id="gold-val">--</div><div class="m-chg" id="gold-chg">--</div></div>
+  </div>
+
+  <!-- NEWS GRID -->
+  <main class="news-grid" id="news-grid">
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Loading latest news...</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Abbhi Tak &copy; 2026 &nbsp;|&nbsp; Powered by NewsAPI</p>
+    <p class="footer-note">Data refreshes every 15 minutes automatically.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
